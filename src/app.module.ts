@@ -3,9 +3,18 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ArticleModule } from './article/article.module';
 import { AdvertModule } from './advert/advert.module';
+import { ArtifactModule } from './artifact/artifact.module';
+import { CarModule } from './car/car.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [ArticleModule, AdvertModule],
+  imports: [
+    ConfigModule.forRoot(),
+    ArticleModule,
+    AdvertModule,
+    ArtifactModule,
+    CarModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

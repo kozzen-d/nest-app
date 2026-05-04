@@ -9,3 +9,14 @@ export class PositiveNumberPipe implements PipeTransform {
     return value;
   }
 }
+
+@Injectable()
+export class CustomParseInt implements PipeTransform {
+  transform(value: string) {
+    const num: number = parseInt(value);
+    if (!num) {
+      throw new BadRequestException('Must be numeric string');
+    }
+    return num;
+  }
+}
