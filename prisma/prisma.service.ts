@@ -13,9 +13,11 @@ export class PrismaService
     });
     super({ adapter });
   }
+
   async onModuleInit() {
     await this.$connect();
   }
+
   async onModuleDestroy() {
     await this.$disconnect();
   }

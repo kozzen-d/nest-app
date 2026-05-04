@@ -20,4 +20,16 @@ model Car {
     @@map("cars")
 }
 
+model Book {
+  id            Int      @id @default(autoincrement())
+  title         String
+  author        String
+  publishedYear Int      @map("published_year")
+  price         Decimal
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt      @map("updated_at")
+
+  @@map("books")
+}
+
 
