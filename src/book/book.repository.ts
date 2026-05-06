@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Book } from 'generated/prisma/client';
+import { Book } from '@prisma/client';
 import { PrismaService } from 'prisma/prisma.service';
 import { BookCreateInput, BookUpdateInput } from './book.interface';
 

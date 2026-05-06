@@ -7,6 +7,7 @@ import { ArtifactModule } from './artifact/artifact.module';
 import { CarModule } from './car/car.module';
 import { ConfigModule } from '@nestjs/config';
 import { BookModule } from './book/book.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { BookModule } from './book/book.module';
     ArtifactModule,
     CarModule,
     BookModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

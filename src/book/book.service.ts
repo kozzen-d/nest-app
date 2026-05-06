@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { BookRepository } from './book.repository';
 import { CreateBookDto } from './book.create.dto';
 import { UpdateBookDto } from './book.update.dto';
-import { Book } from 'generated/prisma/client';
+import { Book } from '@prisma/client';
 
 @Injectable()
 export class BookService {

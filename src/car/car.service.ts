@@ -1,9 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-
 import { CreateCarDto } from './car.create.dto';
 import { UpdateCarDto } from './car.update.dto';
-import { Car } from 'generated/prisma/client';
 import { CarRepository } from './car.repository';
+import { Car } from '@prisma/client';
 
 @Injectable()
 export class CarService {
